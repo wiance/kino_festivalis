@@ -7,5 +7,5 @@ class Film:
         self.release_date = release_date
         self.age_rating = age_rating
 
-    def __repr__(self):
+    def __str__(self):
         return f"{self.film_name} ({self.release_date}), {self.film_duration} min, {self.film_director}, rež. {self.film_director}, reitingas: {self.age_rating}"

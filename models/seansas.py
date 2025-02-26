@@ -1,8 +1,11 @@
-class Seansas:
-    def __init__(self, film, date, time):
-        self.film = film
-        self.date = date
-        self.time = time
+from datetime import datetime
+
+class Screening:
+    def __init__(self, screening_name, date, time):
+        self.screening_name = screening_name
+        self.date = datetime.strptime(date, "%Y-%m-%d").date()
+        self.time = datetime.strptime(time, "%H:%M").time()
+
 
     def __str__(self):
-        return f"{self.film_name} - {self.date} {self.time}, {self.vieta} ({self.laisvos_vietos} laisvų vietų)"
+        return f"{self.screening_name} - {self.date} {self.time}"
