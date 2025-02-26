@@ -7,18 +7,18 @@ class ScreeningService:
     def __init__(self):
         self.screenings_list = load_screeningData(screenings_path)
 
-    def screening_exists(self, date, time):
-        for screen in self.screenings_list:
-                if (screen.date == date and screen.time == time):
-                    print("Ieškomas seansas buvo rastas sąraše")
-                    return True
-        print("neranda")
-        return False  
+    # def screening_exists(self, date, time):
+
+    #     for screen in self.screenings_list:
+    #             if (screen.date == date and screen.time == time):
+    #                 print("Ieškomas seansas buvo rastas sąraše")
+    #                 return True
+    #     return False  
  
     def add_screening(self, screening_name, date, time):
-        if self.screening_exists(date, time):
-            print("Toks seansas jau egzistuoja!")
-            return 
+        # if self.screening_exists(date, time):
+        #     print("Toks seansas jau egzistuoja!")
+        #     return 
         screening = Screening(screening_name, date, time)
         self.screenings_list.append(screening)
         save_screeningData(screenings_path, self.screenings_list)

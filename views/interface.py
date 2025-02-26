@@ -76,8 +76,7 @@ class Interface:
                         screeningName_input = input("Įveskite filmo pavadinimą: ")
                         date_input = input("Įveskite datą (YYYY-MM-DD): ")
                         time_input = input("Įveskite laiką (HH:MM): ")
-                        print(type(date_input), type(time_input))
-
+                       
                         self.screening_service.add_screening(screeningName_input, date_input, time_input)
                         break
                     except ValueError: 
